@@ -1,0 +1,5 @@
+((license "GPL-2")
+(category os)
+(needs xlib)
+(author "Jacob Salzberg")
+(synopsys "A simple way to set the background image on x11."))

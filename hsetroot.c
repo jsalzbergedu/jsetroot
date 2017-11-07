@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "config.h"
+#include "hsetroot-config.h"
 
 typedef enum
 { Full, Fill, Center, Tile } ImageMode;
@@ -200,17 +200,17 @@ load_image (ImageMode mode, const char *arg, int rootW, int rootH, int alpha,
 }
 
 void
-set_background_image (const char *image_file_name)
+set_background_image (const char *image_file_name, Display *_display)
 {
   Visual *vis;
   Colormap cm;
-  Display *_display;
+  // Display *_display;
   Imlib_Context *context;
   Imlib_Image image;
   int width, height, depth, i, alpha;
   Pixmap pixmap;
   Imlib_Color_Modifier modifier = NULL;
-  _display = XOpenDisplay (NULL);
+  // _display = XOpenDisplay (NULL);
 
   for (screen = 0; screen < ScreenCount (_display); screen++)
     {
