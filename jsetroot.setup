@@ -1,3 +1,5 @@
-(compile -s -O3 -d1 jsetroot.scm -lX11 -lImlib2 -j jsetroot)
+(compile -s -O3 -d1 jsetroot.scm -lX11 -lImlib2 -X hahn -j jsetroot)
 (compile -s jsetroot.import.scm -O3 -d0)
-(install-extension 'jsetroot '("jsetroot.so" "jsetroot.import.so") '((version "0.1")))
+(install-extension 'jsetroot
+                   '("jsetroot.so" "jsetroot.import.so")
+                   '((version "0.2")))
